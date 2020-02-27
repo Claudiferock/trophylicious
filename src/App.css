@@ -1,38 +1,84 @@
+/* 
+COLORS:
+
+Light
+Medium gold: rgb(212, 175, 55)
+Dark
+
+ */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
+
 .App {
-  text-align: center;
-}
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 5px; }
+
+/* HEADER */
+.App-header {
+  grid-area: 1 / 1 / 2 / 6;
+  border: 5px solid black; }
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
-}
+  pointer-events: none; }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    animation: App-logo-spin infinite 20s linear; } }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* CONTENT */
+.App-content {
+  grid-area: 2 / 1 / 5 / 6;
+  border: 5px solid red; }
 
-.App-link {
-  color: #61dafb;
-}
+.Feature-items {
+  display: grid;
+  grid-template-columns: 0.5fr repeat(7, 1fr) 0.5fr;
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.feature__main {
+  grid-area: 1 / 2 / 5 / 9; }
+
+.feature__main--img {
+  grid-area: 1 / 2 / 5 / 5;
+  border: 5px solid gray;
+  height: 30rem;
+  /* background: rgba(0, 0, 0, 0.3); */
+  background: no-repeat rgba(0, 0, 0, 0.3) url("https://images-na.ssl-images-amazon.com/images/I/51YN2cpwfHL.jpg"); }
+
+.feature__main--details {
+  grid-area: 1 / 5 / 5 / 9; }
+
+.feature__main--highlight {
+  grid-area: 1 / 1 / 2 / 4; }
+
+.feature__secondary__item1 {
+  grid-area: 5 / 2 / 8 / 4; }
+
+.feature__secondary__item2 {
+  grid-area: 5 / 1 / 6 / 3; }
+
+.feature__secondary__item3 {
+  grid-area: 5 / 4 / 8 / 6; }
+
+.feature__secondary--highlight {
+  grid-area: 5 / 6 / 8 / 8; }
+
+.feature__secondary--more {
+  grid-area: 5 / 8 / 8 / 9; }
+
+/* FOOTER */
+.App-footer {
+  grid-area: 5 / 1 / 6 / 6;
+  border: 5px solid blue; }
