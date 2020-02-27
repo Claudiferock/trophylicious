@@ -1,3 +1,14 @@
+# About
+
+This is an imaginary trophy shop called Trophylicious. The idea came from an activity I was part in while visiting Columbia Road with fellow students. The idea seem fun enough to motivate me to do this.
+
+Trophylicious motto is "There a trophy for anything!", in other words, why not make people feel special and valued (one way or another), even  the lazyest on your team can get a reward on the base that you are not as lazy as him/her. The biggest 4$$ho1e can also be rewarded, after all they push us to be better, weather their intentions are good or not.
+
+Of course you can also reward people for things that really matter like eating the most tacos or being a beer pong guru. We all deserve to be valued for our awesomeness!  
+<a href="https://raw.githubusercontent.com/Claudiferock/trophylicious/master/src/assets/img/favio.gif"><img src="https://raw.githubusercontent.com/Claudiferock/trophylicious/master/src/assets/img/favio.gif" alt="Gif of fabulous Favio and a trophy" width="512"/></a>
+
+# Setup
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

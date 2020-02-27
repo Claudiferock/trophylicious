@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import ducks from './assets/img/ducks.jpg';
 import './App.css';
 
 function App() {
@@ -17,7 +17,9 @@ function App() {
       <div className="App-content">
         <div className="Feature-items">
           <div className="feature__main"> Main</div>
-          <div className="feature__main--img"> main img</div>
+          <div className="feature__main--img">
+            <img src={ducks} alt="Quack awards" />
+          </div>
           <div className="feature__main--details"> main details</div>
           <div className="feature__main--highlight"> main highlight</div>
           <div className="feature__secondary__item1"> secondary item1</div>
