@@ -1,4 +1,4 @@
-# About
+# :trophy: About Trophylicious
 
 This is an imaginary trophy shop called Trophylicious. The idea came from an activity I was part in while visiting Columbia Road with fellow students. The idea seem fun enough to motivate me to do this.
 
