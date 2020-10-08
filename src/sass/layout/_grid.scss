@@ -1,0 +1,95 @@
+.App {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, .5fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 5px;
+    font-size: 1.8rem;
+  }
+  
+  /* HEADER */
+  .App-header {
+    grid-area: -6 / 1 / 1 / 6;
+    //border: 5px solid rgba(0, 0, 0, 0.856);
+    height: 6rem;
+  }
+
+  /* CONTENT */
+.App-content {
+    grid-area: 1 / 1 / 5 / 6;
+    margin-top: 10px;
+    //border: 5px solid rgba(255, 0, 0, 0.5);
+    background: #f9f9f9;
+  }
+  
+  .Feature-items {
+    display: grid;
+    grid: {
+      template-columns: .5fr repeat(7, 1fr) .5fr;
+      template-rows: repeat(7, 1fr);
+      column-gap: 10px;
+      row-gap: 10px;
+    }
+    margin: 20px 0;
+  }
+  
+  .feature__main {
+    grid-area: 1 / 2 / 5 / 9;
+    
+  }
+  .feature__main--img {
+    grid-area: 1 / 2 / 5 / 5;
+    //border: 5px solid gray;
+    img {
+      width: 40rem;
+      //border: 3px solid #1B2951;
+      //border-radius: 5px 25px;
+    }
+  }
+  .feature__main--details {
+    grid-area: 1 / 5 / 5 / 9;
+    //border: 10px solid rgba(255, 128, 0, 0.603);
+  }
+  .feature__main--highlight {
+    grid-area: 1 / 1 / 2 / 4;
+    background: rgba(255, 0, 0, 0.3);
+    color: white;
+    
+  }
+  .feature__secondary__item1 {
+    grid-area: 5 / 2 / 8 / 4;
+    //border: 10px solid rgba(255, 0, 255, 0.603);
+    
+  }
+  .feature__secondary__item2 {
+    grid-area: 5 / 4 / 8 / 6;
+    //border: 10px solid rgba(255, 255, 0, 0.603);
+  }
+
+  .feature__secondary__item3 {
+    grid-area: 5 / 6 / 8 / 8;
+    //border: 10px solid rgba(0, 255, 255, 0.603);
+  }
+  .feature__secondary--highlight {
+    grid-area: 5 / 1 / 6 / 3;
+    background: rgba(255, 0, 0, 0.3);
+    
+  }
+  [class^="feature__secondary__"] {
+    img {
+      width: 28rem;
+      //border: 10px solid rgba(0, 18, 90, 0.603);
+    }
+}
+  .feature__secondary--more {
+    grid-area: 5 / 8 / 8 / 9;
+    background: #1B2951;
+    color: white;
+  }
+    
+  
+  /* FOOTER */
+  .App-footer {
+    grid-area: 5 / 1 / 6 / 6;
+    border: 5px solid rgba(0, 0, 255, 0.5);
+  }

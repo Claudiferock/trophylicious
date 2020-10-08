@@ -1,0 +1,12 @@
+.App-header {
+    background-color:#D0CA73;
+    a {
+      padding: 10px;
+      color:white;
+
+      &:last-child {
+        justify-self: end;
+        text-align: left;
+      }
+    }
+}
