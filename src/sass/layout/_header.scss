@@ -1,12 +1,38 @@
 .App-header {
-    background-color:#D0CA73;
+    background-color:$color-gold;
+    position: sticky;
+    top: 0;
+    padding: 0 20px;
+    z-index: 100;
+    height: 60px;
     a {
-      padding: 10px;
+      padding: 20px 20px;
       color:white;
+      transition: all  150ms ease-in;
+
+      &:hover {
+        cursor: pointer;
+        background: white;
+        box-shadow: -.8em .4em .25rem .09rem rgba(0, 0, 0, 0.4);
+        color: $color-gold;
+        transition: all  300ms ease-out;
+      }
 
       &:last-child {
         justify-self: end;
         text-align: left;
       }
     }
+}
+
+.nav__list{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  li:nth-of-type(4) {
+    margin-left: auto;
+  }
 }

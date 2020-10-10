@@ -51,18 +51,69 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 1.5rem;
   font-family: 'Oxygen Mono', monospace;
   font-family: 'Roboto', sans-serif; }
-  @media only screen and (max-width: 56.26em) {
-    body {
-      padding: 0; } }
+
+.btn--white {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #818782;
+  font-size: 1.4rem; }
+  .btn--white::after {
+    background-color: rgba(255, 255, 255, 0.9); }
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .7s; }
+
+.btn--animated {
+  animation-name: moveUp;
+  animation-duration: 1.2s;
+  animation-delay: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.2) scaleY(1.4);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2); }
+
+img {
+  max-width: 100%;
+  display: block;
+  border: 0.2px solid rgba(0, 18, 90, 0.05); }
+
+.Feature-items {
+  margin: 20px 0;
+  position: relative; }
 
 .App {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 0.5fr);
-  grid-column-gap: 0px;
+  grid-column-gap: 2px;
   grid-row-gap: 5px;
   font-size: 1.8rem; }
 
@@ -74,24 +125,22 @@ body {
 /* CONTENT */
 .App-content {
   grid-area: 1 / 1 / 5 / 6;
-  margin-top: 10px;
-  background: #f9f9f9; }
+  margin: 0;
+  padding-top: 0px;
+  background: #f7f7f7; }
 
 .Feature-items {
   display: grid;
   grid-template-columns: 0.5fr repeat(7, 1fr) 0.5fr;
   grid-template-rows: repeat(7, 1fr);
   grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  margin: 20px 0; }
+  grid-row-gap: 10px; }
 
 .feature__main {
   grid-area: 1 / 2 / 5 / 9; }
 
 .feature__main--img {
   grid-area: 1 / 2 / 5 / 5; }
-  .feature__main--img img {
-    width: 40rem; }
 
 .feature__main--details {
   grid-area: 1 / 5 / 5 / 9; }
@@ -114,9 +163,13 @@ body {
   grid-area: 5 / 1 / 6 / 3;
   background: rgba(255, 0, 0, 0.3); }
 
-[class^="feature__secondary__"] img {
-  width: 28rem; }
-
+/*   [class^="feature__secondary__"] {
+    img {
+      max-width: 100%;
+      display: block;
+      //border: 10px solid rgba(0, 18, 90, 0.603);
+    }
+} */
 .feature__secondary--more {
   grid-area: 5 / 8 / 8 / 9;
   background: #1B2951;
@@ -128,10 +181,56 @@ body {
   border: 5px solid rgba(0, 0, 255, 0.5); }
 
 .App-header {
-  background-color: #D0CA73; }
+  background-color: #D0CA73;
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+  z-index: 100;
+  height: 60px; }
   .App-header a {
-    padding: 10px;
-    color: white; }
+    padding: 20px 20px;
+    color: white;
+    transition: all  150ms ease-in; }
+    .App-header a:hover {
+      cursor: pointer;
+      background: white;
+      box-shadow: -0.8em 0.4em 0.25rem 0.09rem rgba(0, 0, 0, 0.4);
+      color: #D0CA73;
+      transition: all  300ms ease-out; }
     .App-header a:last-child {
       justify-self: end;
       text-align: left; }
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  list-style: none; }
+  .nav__list li:nth-of-type(4) {
+    margin-left: auto; }
+
+.Welcome {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -10px;
+  padding: 3% 0; }
+  .Welcome img {
+    border: none;
+    z-index: 1; }
+  .Welcome .welcome-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #1B2758;
+    padding: 20px 0 20px 20px; }
+    .Welcome .welcome-info p {
+      font-family: 'Roboto', sans-serif;
+      align-self: center;
+      font-size: 3rem;
+      color: #D0CA73;
+      max-width: 40vw;
+      z-index: 10; }
+    .Welcome .welcome-info a {
+      align-self: center; }
