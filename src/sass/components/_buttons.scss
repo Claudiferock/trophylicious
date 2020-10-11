@@ -1,7 +1,7 @@
 .btn {
     &--white {
-        background-color: rgba(white, .9);
-        color:$color-grey;
+        background-color: rgba(white, 1);
+        color:$color-blue-one;
         font-size: 1.4rem;
 
         &::after {
