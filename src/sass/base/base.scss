@@ -44,4 +44,10 @@ body {
     box-sizing: border-box;
     font-family: 'Oxygen Mono', monospace;
     font-family: 'Roboto', sans-serif;
+    background: linear-gradient($color-gold, $color-gold-dark 80%, $color-blue-three);
+    padding: 0;
+
+    @include respond(mid-desktop) {
+        padding: 0 3rem;
+    }
 }

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   padding-left: 5%;
-  background: $color-grey;
+  background: $color-green;
   height: 10vh;
   color: white;
 }
@@ -13,10 +13,10 @@ a {
   transition: all 100ms ease-in;
   &:hover {
     background: white;
-    color: $color-grey;
+    color: $color-gold;
     border-radius: 5px;
     padding: 20px 60px;
-    text-shadow: rgba(0, 0, 0, 0.6) -.6px .8px;
+    text-shadow: rgba(black, 0.4) -.8px 1px;
     transition: all 50ms ease-out;
   }
 }

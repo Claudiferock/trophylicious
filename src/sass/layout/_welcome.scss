@@ -3,23 +3,25 @@
   justify-content: space-around;
   padding: 5% 1% 10%;
   //background: $color-blue-one;
-
+  
   img {
     //position: absolute;
     border: none;
     z-index: 1;
   }
-
+  
   .welcome-info{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
     background-color: $color-blue-three;
     padding: 20px;
 
     p {
       font-family: 'Roboto', sans-serif;
-      align-self: center;
       padding: 0 40px;
       font-size: 3rem;
       // color:$color-gold;
@@ -28,8 +30,13 @@
       z-index: 10;
       //position: relative;
     }
+    q {
+      font-size: 2rem;
+      //align-self: center;
+      font-style: italic;
+    }
     a {
-        align-self: center; 
+        //align-self: center; 
     }
   }
 }

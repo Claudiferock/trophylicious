@@ -25,7 +25,7 @@ function App() {
         <div className="Welcome" id="welcome">
           <img src={favio} alt="Favio welcomes you to Trophylicious" width="720px"/>
           <div className="welcome-info">
-            <p>We all deserve recognition for our... "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+            <p>We all deserve to be recognized and vallued. Show it with a trophy!<br/><br/><q>The trophy is earned in the hour that no one is watching</q></p>
             <a href="#feature-items" class="btn btn--white btn--animated">Feature trophies</a>
           </div>
         </div>
@@ -39,7 +39,7 @@ function App() {
             <h2>Quacktastick Award Pack</h2>
             <p>description</p>
             <div className="item__extras">
-              <div className="item--priceTag">€ </div>
+              <div className="item--priceTag">{((60/100) * (3*12)).toFixed(2)} €</div>
               <div className="item--quantity">
                 <input type="number"/>
               </div>
@@ -65,16 +65,22 @@ function App() {
           <div className="feature__secondary--more">MORE</div>
         </div>
 
-        <div className="Categories" id="categories"></div>
+        <div className="Categories" id="categories">
+          <div className="trophies"></div>
+          <div className="medals"></div>
+          <div className="cups"></div>
+          <div className="glass-cristals"></div>
+        </div>
 
       </div>
 
       <footer className="App-footer" id="footer">
         <p>
           <span role="img" aria-label="Flying hero">🐱‍🏍</span>
-          <a href="https://github.com/Claudiferock">Claudiferock</a>
+          <a href="https://github.com/Claudiferock">GitHub/Claudiferock</a>
           <span role="img" aria-label="Trade mark">™</span>2020
           <span role="img" aria-label="Ninja cat">🐱‍👤</span>
+          <a href="mailto:claudifero@gmail.com?Subject=Trophylicious feedback"> Email me!</a>
         </p>
       </footer>
     </div>

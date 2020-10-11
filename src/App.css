@@ -52,7 +52,12 @@ html {
 body {
   box-sizing: border-box;
   font-family: 'Oxygen Mono', monospace;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(#D0CA73, #979033 80%, #1B2758);
+  padding: 0; }
+  @media only screen and (min-width: 85em) {
+    body {
+      padding: 0 3rem; } }
 
 .btn--white {
   background-color: white;
@@ -107,8 +112,7 @@ img {
 
 .Feature-items {
   padding: 50px 0;
-  position: relative;
-  border: 5px solid rgba(0, 0, 255, 0.5); }
+  position: relative; }
 
 [class$="--details"] {
   display: flex;
@@ -123,7 +127,8 @@ img {
 
 .item__extras {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  padding: 0 200px; }
 
 [class$="--highlight"] {
   display: flex;
@@ -139,6 +144,7 @@ img {
   transition: all 200ms ease-in-out; }
   [class$="--highlight"]:hover {
     background: rgba(255, 0, 0, 0.8);
+    box-shadow: -0.5em 0.25em 0.2rem 0.05rem rgba(0, 0, 0, 0.6);
     transition: all 100ms ease-in-out; }
 
 [class^="feature__secondary__item"] {
@@ -171,7 +177,7 @@ img {
   display: flex;
   align-items: center;
   padding-left: 5%;
-  background: #818782;
+  background: #73D09B;
   height: 10vh;
   color: white; }
 
@@ -181,10 +187,10 @@ a {
   transition: all 100ms ease-in; }
   a:hover {
     background: white;
-    color: #818782;
+    color: #D0CA73;
     border-radius: 5px;
     padding: 20px 60px;
-    text-shadow: rgba(0, 0, 0, 0.6) -0.6px 0.8px;
+    text-shadow: rgba(0, 0, 0, 0.4) -0.8px 1px;
     transition: all 50ms ease-out; }
 
 .App {
@@ -295,15 +301,18 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
     background-color: #1B2758;
     padding: 20px; }
     .Welcome .welcome-info p {
       font-family: 'Roboto', sans-serif;
-      align-self: center;
       padding: 0 40px;
       font-size: 3rem;
       max-width: 40vw;
       color: white;
       z-index: 10; }
-    .Welcome .welcome-info a {
-      align-self: center; }
+    .Welcome .welcome-info q {
+      font-size: 2rem;
+      font-style: italic; }
