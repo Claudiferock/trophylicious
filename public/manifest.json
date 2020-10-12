@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Trophylicious",
+  "name": "Trophylicious | Because there's a trophy for anything",
+  "description": "Imaginary trophy webshop called Trophylicious"
   "icons": [
     {
       "src": "favicon.ico",

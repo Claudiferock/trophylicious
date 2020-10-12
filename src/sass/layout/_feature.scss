@@ -8,6 +8,13 @@ img {
     padding: 50px 0;
     position: relative;
     //border: 5px solid rgba(0, 0, 255, 0.5);
+    &:hover {
+      [class$="--highlight"] {
+        background: rgba(255, 0, 0, 0.8);
+        box-shadow: -.5em .25em .2rem .05rem rgba(0, 0, 0, 0.6);
+        transition: all 100ms ease-in-out;
+      }
+    }
   }
 
 [class$="--details"] {
@@ -40,11 +47,11 @@ img {
   font-weight: bolder;
   text-shadow: rgba(0, 0, 0, 0.6) -2px 4px;
   transition: all 200ms ease-in-out;
-  &:hover {
+/*   &:hover {
     background: rgba(255, 0, 0, 0.8);
     box-shadow: -.5em .25em .2rem .05rem rgba(0, 0, 0, 0.6);
     transition: all 100ms ease-in-out;
-  }
+  } */
 }
 
 [class^="feature__secondary__item"] {
