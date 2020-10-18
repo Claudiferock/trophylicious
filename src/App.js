@@ -31,23 +31,26 @@ function App() {
         </div>
 
         <div className="Feature-items" id="feature-items">
-          <div className="feature__main"> Main</div>
-          <div className="feature__main--img">
-            <img src={ducksAward} alt="Quack awards" loading="lazy"/>
-          </div>
-          <div className="feature__main--details">
-            <h2>Quacktastick Award Pack</h2>
-            <p>description</p>
-            <div className="item__extras">
-              <div className="item--priceTag">{((60/100) * (3*12)).toFixed(2)} €</div>
-              <div className="item--quantity">
-                <input type="number"/>
-              </div>
-              <div className="item--favorite"><span>🤍❤</span></div>
+          
+          <div className="feature__main">    
+            <div className="feature__main--img">
+              <img src={ducksAward} alt="Quack awards" loading="lazy"/>
             </div>
 
+            <div className="feature__main--details">
+              <h2>Quacktastick Award Pack</h2>
+              <p>description</p>
+              <div className="item__extras">
+                <div className="item--priceTag">{((60/100) * (3*12)).toFixed(2)} €</div>
+                <div className="item--quantity">
+                  <input type="number"/>
+                </div>
+                <div className="item--favorite"><span>🤍❤</span></div>
+              </div>
+            </div>
+
+            <div className="feature__main--highlight" alt="main highlight">60% OFF</div>
           </div>
-          <div className="feature__main--highlight" alt="main highlight">60% OFF</div>
 
           <div className="feature__secondary__item1">            
             <img src={beerPongAward} alt="Beer Pong award" loading="lazy"/>
