@@ -1,7 +1,7 @@
 .Feature-items {
   padding: 5em 0;
   position: relative;
-  border: 5px solid rgba(255, 0, 255, 0.5);
+  //border: 5px solid rgba(255, 0, 255, 0.5);
   &:hover {
     [class$="--highlight"] {
       background: rgba(255, 0, 0, 0.8);
@@ -135,7 +135,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background: red;
+    //background: red;
     padding: 0 2%;
   }
 }
