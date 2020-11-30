@@ -2,21 +2,35 @@
   display: flex;
   align-items: center;
   padding-left: 5%;
-  background: $color-green;
+  background: transparent;
   height: 10vh;
   color: white;
-}
 
-a {
-  text-decoration: none;
-  color: white;
-  transition: all 100ms ease-in;
-  &:hover {
-    background: white;
-    color: $color-gold;
-    border-radius: 5px;
-    padding: 20px 60px;
-    text-shadow: rgba(black, 0.4) -.8px 1px;
-    transition: all 50ms ease-out;
+  a {
+    text-decoration: none;
+    color: white;
+    transition: all 100ms ease-in;
+    &:hover, &:active, &:focus {
+      background: white;
+      color: var(--color-base-700);
+      border-radius: 5px;
+      border: .1em solid var(--color-red-500);
+      padding: .8em 1.8em;
+      text-shadow: rgba(black, 0.5) -.8px 1px;
+      outline: 0.14em solid khaki;
+      outline-offset: 1em;
+      -moz-outline-radius: 1.3em;
+      box-shadow: 0 0 0 .18em var(--color-white-500),
+      0 0 0 .55em var(--color-red-500),
+      0 0 0 .6em var(--color-white-500),
+      // -.8em .4em .25rem .09rem rgba(0, 0, 0, 0.6), .8em -.4em .25rem .09rem rgba(0, 0, 0, 0.6)
+      ;
+      transition: all 50ms ease-out;
+    }
   }
 }
+
+.span-margin {
+  margin: 0 .5em;
+}
+

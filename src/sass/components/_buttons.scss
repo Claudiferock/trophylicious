@@ -1,7 +1,7 @@
 .btn {
     &--white {
         background-color: rgba(white, 1);
-        color:$color-blue-one;
+        color: var(--color-base-500);
         font-size: 1.4rem;
 
         &::after {
@@ -42,6 +42,7 @@
     }
 
     &:hover {
+        color: var(--color-base-500);
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba(black, .2);
 

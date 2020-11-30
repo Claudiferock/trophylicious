@@ -24,48 +24,82 @@
 .Feature-items {
   display: grid;
   grid: {
-    template-columns: .5fr repeat(7, 1fr) .5fr;
-    template-rows: repeat(7, 1fr);
-    column-gap: 10px;
-    row-gap: 100px;
+    template-columns: .5fr repeat(6, 1fr) .5fr;
+    template-rows: repeat(4, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
   }
 }
 
 .feature__main {
-  grid-area: 1 / 2 / 5 / 9;
+		grid-area: 1 / 2 / 3 / 8;
+		margin: 1em 0  0;
 }
-.feature__main--img {
-  grid-area: 1 / 2 / 5 / 5;
-}
-.feature__main--details {
-  grid-area: 1 / 5 / 5 / 9;
-}
+// .feature__main--img {
+//   grid-area: 1 / 2 / 2 / 5;
+// }
+// .feature__main--details {
+//   // grid-area: 1 / 5 / 5 / 9;
+// }
 .feature__main--highlight {
-  grid-area: 1 / 1 / 2 / 4;
+  grid-area: 1 / 1 / 2 / 3;
 }
 
 .feature__secondary__item1 {
-  grid-area: 5 / 2 / 8 / 4;
-  
+  grid-area: 3 / 2 / 6 / 4;
 }
 .feature__secondary__item2 {
-  grid-area: 5 / 4 / 8 / 6;
+  grid-area: 3 / 4 / 6 / 6;
 }
 .feature__secondary__item3 {
-  grid-area: 5 / 6 / 8 / 8;
+  grid-area: 3 / 6 / 6 / 8;
 }
 .feature__secondary--highlight {
-  grid-area: 5 / 1 / 6 / 3;
+  grid-area: 3 / 1 / 4 / 3;
 }
-
 .feature__secondary--more {
-  grid-area: 5 / 8 / 8 / 9;
-  background: $color-blue-one;
+  grid-area: 3 / 8 / 5 / 9;
+		background: $color-blue-one;
+		margin: 0 0 .5em;
   color: white;
 }
-  
+
+@include respond(phone-port) {
+  .Feature-items {
+    grid: {
+      // template-columns: .5fr repeat(6, 1fr) .5fr;
+      template-rows: repeat(5, 1fr);
+    }
+  }
+		.feature__main {
+			grid-area: 1 / 1 / 5 / 9;
+	}
+
+  .feature__secondary__item1 {
+    grid-area: 5 / 2 / 6 / 4;
+  }
+  .feature__secondary__item2 {
+    grid-area: 5 / 4 / 6 / 6;
+  }
+  .feature__secondary__item3 {
+    grid-area: 5 / 6 / 6 / 8;
+  }
+  .feature__secondary--highlight {
+    grid-area: 5 / 1 / 6 / 3;
+  }
+  .feature__secondary--more {
+    grid-area: 5 / 8 / 6 / 9;
+    background: $color-blue-one;
+    color: white;
+  }
+}
+
+/* CATEGORIES */
+.Categories {
+  grid-area: 5 / 1 / 6 / 6;
+}
 
 /* FOOTER */
 .App-footer {
-  grid-area: 5 / 1 / 6 / 6;
+  grid-area: 6 / 1 / 6 / 6;
 }

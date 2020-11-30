@@ -1,8 +1,8 @@
 .Feature-items {
-  padding: 5em 0;
+  margin: 1em 0;
   position: relative;
-  //border: 5px solid rgba(255, 0, 255, 0.5);
-  &:hover {
+  // border: 5px solid rgba(255, 0, 255, 0.5);
+  &:hover, &:focus, &:active {
     [class$="--highlight"] {
       background: rgba(255, 0, 0, 0.8);
       box-shadow: -.5em .25em .2rem .05rem rgba(0, 0, 0, 0.6);
@@ -10,24 +10,44 @@
     }
   }
 
+  [class$="-img"] {
+    overflow: clip;
+  }
+
+  .description-text {
+    margin: .5em 1em;
+  }
+
   @include respond(phone-port) {
 
     .feature__main {
+      display: flex;
       flex-direction: column;
-      padding-top: 40%;
-      margin-left: 6vw !important;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      // padding: 68% 0 46%;
       
-      img {
-        width: 70vw !important;
+      &-img {
+        // margin-top: 10em;
+        // clip-path: ellipse(73% 76% at 52% 68%);
+        // border: 5px solid rgba(0, 255, 0, 0.5);
+        border: .01em solid rgba(0, 0, 0, 0.35);
+        border-radius: 25px 25px 0 0;
+        box-shadow: -.5em .25em .2rem .03rem rgba(0, 0, 0, 0.4);
+        max-width: 80%;
       }
-  
-      .feature__main--details {
-  
-        width: 70vw;
+      
+      .feature__main-info {
+        width: 80%;
+        padding: 2em 0;
+        border: .01em solid rgba(0, 0, 0, .35);
+        border-radius: 0 0 25px 25px;
+        box-shadow: -.5em .25em .2rem .03rem rgba(0, 0, 0, 0.4);
       }
 
       .feature__main--highlight {
-        top: 2vh;
+        top: 3vh;
         margin-top: 0vh;
       }
     }
@@ -49,7 +69,7 @@
       }
     }
     
-    .feature__main--details {
+    .feature__main-info {
       margin-left: 0;
       border: none;
       width: 50vw;
@@ -58,24 +78,23 @@
 
   @include respond(tab-port) {
     margin: 0;
-    padding: 4em 0;
+    // padding: 4em 0 0;
     
     .feature__main {
       //background: blue;
-      margin-left: -4vw;
+      // margin-left: -4vw;
       width: 94vw;
-      height: 36vw;
       justify-content: space-between;
 
       img {
-        width: 36vw;
+        width: 100%;
       }
-/*       &--img {
+/*       &-img {
         //width: max-content;
       } */
     }
 
-    .feature__main--details {
+    .feature__main-info {
       /*       border: 5px solid rgba(0, 0, 255, 0.5);
       
       width: 36vw;
@@ -91,7 +110,7 @@
   }
 
   @include respond(big-desktop) {
-    padding: 10em 0;
+    padding: 10em 0 0;
   }
 
 }
@@ -105,17 +124,16 @@ img {
 .feature__main {
   display: flex;
   flex-direction: row;
-  //border: 50px solid rgba(225, 250, 180, 1);
-  &--img {
+  justify-content: space-between;
+  // border: 5px solid rgba(225, 20, 0, 1);
+  max-width: 100%;
+  &-img {
     //border: 5px solid rgba(0, 255, 0, 0.5);
-    width: max-content;
-    img {
-      width: 40vw;
-    }
+    max-width: 50%;
   }
 }
 
-.feature__main--details {
+.feature__main-info {
   border: 5px solid rgba(0, 0, 255, 0.5);
   //background: blue;
 
@@ -124,19 +142,38 @@ img {
   align-content: space-around;
   justify-content: center;
   align-items: center;
-  width: 40vw;
+  width: 50%;
   height: auto;
   background: white;
   border: .4px solid rgba(0, 18, 90, 0.1);
   margin-left: 5vw;
   border-radius: 2%;
 
-  .item__extras {
+  .feature__main-details {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    //background: red;
-    padding: 0 2%;
+    align-items: center;
+    padding: 1em 2%;
+    
+    input {
+      padding: .4em 1em;
+      margin: -2px 5px 0px;
+      font-family:inherit;
+      font-size: inherit;
+      background-color: var(--color-base-500);
+      color:white;
+      width: 2em;
+      border: .12em solid var(--color-secondary-700);
+      
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 10em;
+        background: red;
+      }
+      -moz-appearance: textfield;
+    }
   }
 }
 
@@ -167,8 +204,10 @@ img {
 }
 
 [class^="feature__secondary__item"] {
-  background: white;
-  border: .4px solid rgba(0, 18, 90, 0.1);
+  //background: red;
+  border: .4px solid rgba(0, 18, 90, 0.4);
+  border-radius: 5px;
+  height: fit-content;
   .priceTag {
     width: 100%;
     color: $color-blue-one;
@@ -194,5 +233,9 @@ img {
   &:active {
     text-shadow: rgba(black, 1) -2px 4px;
     transition: all 100ms ease-out;
+  }
+  
+  @include respond(phone-land) {
+    // height: 12vh;
   }
 }

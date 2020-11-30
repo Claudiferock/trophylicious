@@ -8,15 +8,27 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="home">
 
       <header className="App-header">
+        
+        <button class="nav-toggle" aria-label="open navigation">
+          <span class="hamburger">
+            <svg className="hamburber-menu" viewBox="0 0 100 80" width="20" height="20" fill="white">
+                <rect width="100" height="14" rx="8"></rect>
+                <rect y="30" width="100" height="14" rx="8"></rect>
+                <rect y="60" width="100" height="14" rx="8"></rect>
+            </svg>
+          </span>
+        </button>
+
         <nav className="nav__list">
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#welcome">About</a></li>
-          <li><a href="#footer">Contact</a></li>
-          <li><a href="#top">Log In</a></li>
-          <li><a href="#top"><span role="img" aria-label="Shopping kart">🛒</span></a></li>
+          <li><a href="#home" className="nav__link nav__link-emoji"><span role="img" aria-label="Trophy">🏆</span></a></li>
+          <li><a href="#welcome" className="nav__link">About</a></li>
+          <li><a href="#categories" className="nav__link">Categories</a></li>
+          <li><a href="#footer" className="nav__link">Contact</a></li>
+          <li><a href="#top" className="nav__link">Log In</a></li>
+          <li><a href="#top" className="nav__link nav__link-emoji"><span role="img" aria-label="Shopping kart">🛒</span></a></li>
         </nav>
       </header>
 
@@ -33,19 +45,21 @@ function App() {
         <div className="Feature-items" id="feature-items">
           
           <div className="feature__main">    
-            <div className="feature__main--img">
+            <div className="feature__main-img">
               <img src={ducksAward} alt="Quack awards" loading="lazy"/>
             </div>
 
-            <div className="feature__main--details">
+            <div className="feature__main-info">
               <h2>Quacktastick Award Pack</h2>
-              <p>description</p>
-              <div className="item__extras">
-                <div className="item--priceTag">{((60/100) * (3*12)).toFixed(2)} €</div>
+              <p className="description-text">It's not easy to explain things, let alone to explain code. Why not showing your appretiation for those that can make you understand their code without struggles?</p>
+              <div className="feature__main-details">
+                <div className="item--priceTag">{((60/100) * (3*12)).toFixed(2)} € x </div>
                 <div className="item--quantity">
-                  <input type="number"/>
+                  <input type="number" value="1" min="0" max="100"/>
+                  <button>+</button>
+                  <button>-</button>
                 </div>
-                <div className="item--favorite"><span>🤍❤</span></div>
+                <div className="item--favorite"><span className="hidden">❤️</span><span className="visible">🤍</span></div>
               </div>
             </div>
 
@@ -53,15 +67,15 @@ function App() {
           </div>
 
           <div className="feature__secondary__item1">            
-            <img src={beerPongAward} alt="Beer Pong award" loading="lazy"/>
+            <img className="feature__secondary-img" src={beerPongAward} alt="Beer Pong award" loading="lazy"/>
             <div className="priceTag">€ </div>
           </div>
           <div className="feature__secondary__item2">            
-            <img src={spoonAward} alt="spoon award" loading="lazy"/>
+            <img className="feature__secondary-img" src={spoonAward} alt="spoon award" loading="lazy"/>
             <div className="priceTag">€ </div>
           </div>
           <div className="feature__secondary__item3">             
-            <img src={tacoAward} alt="Taco award" loading="lazy"/>
+            <img className="feature__secondary-img" src={tacoAward} alt="Taco award" loading="lazy"/>
             <div className="priceTag">€ </div>
           </div>
           <div className="feature__secondary--highlight" alt="secondary highlight">24% OFF</div>
@@ -79,10 +93,9 @@ function App() {
 
       <footer className="App-footer" id="footer">
         <p>
-          <span role="img" aria-label="Flying hero">🐱‍🏍</span>
-          <a href="https://github.com/Claudiferock">GitHub/Claudiferock</a>
-          <span role="img" aria-label="Trade mark">™</span>2020
-          <span role="img" aria-label="Ninja cat">🐱‍👤</span>
+          <span className="span-margin" role="img" aria-label="sunglasses emoji">😎</span>
+          <a href="https://github.com/Claudiferock">GitHub/Claudiferock <span role="img" aria-label="Trade mark">™</span>2020</a>
+          <span className="span-margin" role="img" aria-label="character emoji"> ¯\_(ツ)_/¯ </span>
           <a href="mailto:claudifero@gmail.com?Subject=Trophylicious feedback"> Email me!</a>
         </p>
       </footer>
