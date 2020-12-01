@@ -184,13 +184,13 @@ img {
 .feature__main--highlight {
   grid-area: 1 / 1 / 2 / 3; }
 
-.feature__secondary__item1 {
+.item1 {
   grid-area: 3 / 2 / 6 / 4; }
 
-.feature__secondary__item2 {
+.item2 {
   grid-area: 3 / 4 / 6 / 6; }
 
-.feature__secondary__item3 {
+.item3 {
   grid-area: 3 / 6 / 6 / 8; }
 
 .feature__secondary--highlight {
@@ -207,11 +207,11 @@ img {
     grid-template-rows: repeat(5, 1fr); }
   .feature__main {
     grid-area: 1 / 1 / 5 / 9; }
-  .feature__secondary__item1 {
+  .item1 {
     grid-area: 5 / 2 / 6 / 4; }
-  .feature__secondary__item2 {
+  .item2 {
     grid-area: 5 / 4 / 6 / 6; }
-  .feature__secondary__item3 {
+  .item3 {
     grid-area: 5 / 6 / 6 / 8; }
   .feature__secondary--highlight {
     grid-area: 5 / 1 / 6 / 3; }
@@ -445,23 +445,9 @@ header {
       margin: 0; }
       .Feature-items .feature__main {
         width: 94vw;
-        justify-content: space-between;
-        /*       &-img {
-        //width: max-content;
-      } */ }
+        justify-content: space-between; }
         .Feature-items .feature__main img {
-          width: 100%; }
-      .Feature-items .feature__main-info {
-        /*       border: 5px solid rgba(0, 0, 255, 0.5);
-      
-      width: 36vw;
-      height: 36vw;
-      margin-left: 8vw;
-    
-      .item__extras {
-        background: blue;
-        padding: 0 2%;
-      } */ } }
+          width: 100%; } }
   @media only screen and (min-width: 112.5em) {
     .Feature-items {
       padding: 10em 0 0; } }
@@ -480,7 +466,6 @@ img {
     max-width: 50%; }
 
 .feature__main-info {
-  border: 5px solid rgba(0, 0, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -527,12 +512,7 @@ img {
   font-size: 4rem;
   font-weight: bolder;
   text-shadow: rgba(0, 0, 0, 0.6) -2px 4px;
-  transition: all 200ms ease-in-out;
-  /*   &:hover {
-    background: rgba(255, 0, 0, 0.8);
-    box-shadow: -.5em .25em .2rem .05rem rgba(0, 0, 0, 0.6);
-    transition: all 100ms ease-in-out;
-  } */ }
+  transition: all 200ms ease-in-out; }
 
 [class^="feature__secondary__item"] {
   border: 0.4px solid rgba(0, 18, 90, 0.4);

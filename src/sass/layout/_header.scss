@@ -125,8 +125,6 @@ header {
       }
       
       nav li {
-        //background: rgba(0, 113, 128, 0.157);
-        //width: 20px;
         height: 30px;
         padding: 0em;
         position: relative;
@@ -138,9 +136,6 @@ header {
       }
       
       .nav__link {
-        //width: auto;
-        //max-width: auto;
-        //color: red;
         height: 28px;
         padding: .8em .5em;
         margin-right: .4em;
@@ -152,7 +147,6 @@ header {
       }
     
       &:last-child {
-        //min-width: 200px;
         justify-self: end;
         text-align: left;
       }
