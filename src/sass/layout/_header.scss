@@ -7,7 +7,7 @@ header {
 }
 
 .App-header {
-  background-color: (var(--color-base-500));
+  background-color: rgba($color-base-500, 0.8);
   position: sticky;
   top: 0;
   padding: 0 2%;
@@ -15,6 +15,10 @@ header {
   height: 60px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: rgba($color-base-500, 1);
+  }
 
   .nav-toggle {
     display: none;

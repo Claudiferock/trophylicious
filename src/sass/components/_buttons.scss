@@ -1,4 +1,7 @@
 .btn {
+    cursor: pointer;
+    font-family: inherit;
+
     &--white {
         background-color: rgba(white, 1);
         color: var(--color-base-500);
@@ -7,6 +10,16 @@
         &::after {
             background-color: rgba(white, 0.9);
         }
+    }
+
+    &--cart {
+        padding: 1em 2em;
+        border: .1em solid var(--color-base-500);
+        border-radius: .4em;
+        background: transparent;
+        font-size: .8em;
+        color: var(--color-base-500);
+        transition: all 150ms ease-in-out;
     }
 
     &::after {

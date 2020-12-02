@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import '../App.css';
 
 const Nav = () => (
     <>
       <header className="App-header">
         
-        <button class="nav-toggle" aria-label="open navigation">
-          <span class="hamburger">
+        <button className="nav-toggle" aria-label="open navigation">
+          <span className="hamburger">
             <svg className="hamburber-menu" viewBox="0 0 100 80" width="20" height="20" fill="white">
                 <rect width="100" height="14" rx="8"></rect>
                 <rect y="30" width="100" height="14" rx="8"></rect>
