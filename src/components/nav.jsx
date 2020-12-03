@@ -16,7 +16,7 @@ const Nav = () => (
         </button>
 
         <nav className="nav__list">
-          <li><a href="#home" className="nav__link nav__link-emoji"><span role="img" aria-label="Trophy">🏆</span></a></li>
+          <li><a href="#top" className="nav__link nav__link-emoji"><span role="img" aria-label="Trophy">🏆</span></a></li>
           <li><a href="#welcome" className="nav__link">About</a></li>
           <li><a href="#categories" className="nav__link">Categories</a></li>
           <li><a href="#footer" className="nav__link">Contact</a></li>

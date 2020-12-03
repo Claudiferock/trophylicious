@@ -116,14 +116,6 @@ img {
     font-size: 1.4rem; }
     .btn--white::after {
       background-color: rgba(255, 255, 255, 0.9); }
-  .btn--cart {
-    padding: 1em 2em;
-    border: 0.1em solid var(--color-base-500);
-    border-radius: .4em;
-    background: transparent;
-    font-size: .8em;
-    color: var(--color-base-500);
-    transition: all 150ms ease-in-out; }
   .btn::after {
     content: '';
     display: inline-block;
@@ -159,6 +151,22 @@ img {
   .btn:active {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2); }
+  .btn--cart {
+    padding: 1em 2em;
+    border: none;
+    border-radius: .4em;
+    background: var(--color-base-500);
+    font-size: 1em;
+    font-weight: 700;
+    color: white;
+    transition: all 150ms ease-in-out; }
+    .btn--cart:hover {
+      color: white; }
+    @media only screen and (max-width: 56.26em) {
+      .btn--cart {
+        font-size: .8em;
+        padding: .5em 1em;
+        margin: 0; } }
 
 .App {
   display: grid;
@@ -400,6 +408,8 @@ header {
   @media only screen and (max-width: 75em) {
     .Welcome {
       padding-bottom: 1%; }
+      .Welcome p {
+        font-size: 1em !important; }
       .Welcome img {
         border-radius: 0px; }
       .Welcome .welcome-info {
@@ -415,8 +425,50 @@ header {
     transition: all 100ms ease-in-out; }
   .Feature-items [class$="-img"] {
     overflow: clip; }
-  .Feature-items .description-text {
-    margin: .5em 1em; }
+  .Feature-items .feature__main-info {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    background: white;
+    border: 0.4px solid rgba(0, 18, 90, 0.1);
+    margin-left: 2em;
+    padding: 0 3em;
+    border-radius: 2%;
+    color: var(--color-base-500); }
+    .Feature-items .feature__main-info .description-title {
+      text-transform: uppercase;
+      font-size: 1.8em;
+      line-height: .8;
+      letter-spacing: .09em;
+      font-style: italic; }
+    .Feature-items .feature__main-info .item--favorite {
+      display: flex;
+      margin-left: 1em;
+      padding: 1em;
+      border-radius: 50px;
+      transition: all 150ms ease-in-out;
+      justify-content: center; }
+      .Feature-items .feature__main-info .item--favorite:hover .svg-heart {
+        opacity: .6; }
+      .Feature-items .feature__main-info .item--favorite:active .svg-heart {
+        fill: var(--color-red-500);
+        opacity: 1; }
+    .Feature-items .feature__main-info .item--priceTag {
+      font-size: .6em;
+      color: var(--color-green-500);
+      font-weight: 500; }
+    .Feature-items .feature__main-info .description-text {
+      margin: 2em 1em; }
+    .Feature-items .feature__main-info .feature__main-details {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1em 2em; }
   @media only screen and (max-width: 30em) {
     .Feature-items .feature__main {
       display: flex;
@@ -458,6 +510,14 @@ header {
       .Feature-items .feature__main {
         width: 94vw;
         justify-content: space-between; }
+        .Feature-items .feature__main .feature__main-info {
+          padding: 1em 1em 0; }
+          .Feature-items .feature__main .feature__main-info .description-title {
+            font-size: 1.4em; }
+          .Feature-items .feature__main .feature__main-info .description-text {
+            margin: 1em 0; }
+          .Feature-items .feature__main .feature__main-info .feature__main-details {
+            padding: 0; }
         .Feature-items .feature__main img {
           width: 100%; } }
   @media only screen and (min-width: 112.5em) {
@@ -476,29 +536,6 @@ img {
   max-width: 100%; }
   .feature__main-img {
     max-width: 50%; }
-
-.feature__main-info {
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: auto;
-  background: white;
-  border: 0.4px solid rgba(0, 18, 90, 0.1);
-  margin-left: 5vw;
-  border-radius: 2%; }
-  .feature__main-info .item--priceTag {
-    font-size: .6em;
-    color: var(--color-green-500);
-    font-weight: 500; }
-  .feature__main-info .feature__main-details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1em 2%; }
 
 [class$="--highlight"] {
   display: flex;
@@ -551,9 +588,14 @@ img {
   height: 10vh;
   color: white; }
   .App-footer a {
+    justify-content: center;
     text-decoration: none;
     color: white;
     transition: all 100ms ease-in; }
+    .App-footer a .octicon {
+      fill: var(--color-white-500);
+      margin-left: 1em;
+      padding-top: .4em; }
     .App-footer a:hover, .App-footer a:active, .App-footer a:focus {
       background: white;
       color: var(--color-base-700);
@@ -564,8 +606,22 @@ img {
       outline: 0.14em solid khaki;
       outline-offset: 1em;
       -moz-outline-radius: 1.3em;
-      box-shadow: 0 0 0 0.18em var(--color-white-500), 0 0 0 0.55em var(--color-red-500), 0 0 0 0.6em var(--color-white-500);
+      box-shadow: 0 0 0 0.18em var(--color-white-500), 0 0 0 0.55em var(--color-red-500);
       transition: all 50ms ease-out; }
+      .App-footer a:hover .octicon, .App-footer a:active .octicon, .App-footer a:focus .octicon {
+        fill: var(--color-base-500);
+        padding: 0; }
+  @media only screen and (max-width: 75em) {
+    .App-footer {
+      padding: 2em 0 !important;
+      font-size: 1.4em; }
+      .App-footer a {
+        margin-left: 1em; }
+        .App-footer a:hover, .App-footer a:active, .App-footer a:focus {
+          background: white;
+          padding: .5em 1em; }
+          .App-footer a:hover .octicon, .App-footer a:active .octicon, .App-footer a:focus .octicon {
+            margin-left: 0; } }
 
 .span-margin {
   margin: 0 .5em; }

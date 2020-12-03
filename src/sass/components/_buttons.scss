@@ -12,16 +12,6 @@
         }
     }
 
-    &--cart {
-        padding: 1em 2em;
-        border: .1em solid var(--color-base-500);
-        border-radius: .4em;
-        background: transparent;
-        font-size: .8em;
-        color: var(--color-base-500);
-        transition: all 150ms ease-in-out;
-    }
-
     &::after {
         content: '';
         display: inline-block;
@@ -68,5 +58,26 @@
     &:active {
         transform: translateY(-1px);
         box-shadow: 0 .5rem .8rem rgba(black, .2);
+    }
+
+    
+    &--cart {
+        padding: 1em 2em;
+        border: none;
+        border-radius: .4em;
+        background: var(--color-base-500);
+        font-size: 1em;
+        font-weight: 700;
+        color: white;
+        transition: all 150ms ease-in-out;
+        &:hover {
+            color: white;
+        }
+
+        @include respond(tab-port) {
+            font-size: .8em;
+            padding: .5em 1em;
+            margin: 0;
+        }
     }
 }

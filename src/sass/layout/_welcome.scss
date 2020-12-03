@@ -63,6 +63,9 @@
   @include respond(tab-land) {
     padding-bottom: 1%;
     //padding: 5%;
+    p {
+      font-size: 1em !important;
+    }
     img {
       border-radius: 0px;
       //box-shadow: 0rem 5rem 6rem rgba(0, 0, 0, 0.6);
