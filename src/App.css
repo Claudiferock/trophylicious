@@ -21,15 +21,17 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   --color-base-500: #1B2758;
   --color-base-600: #1B2951;
   --color-base-700: #1A2853;
-  --color-secondary-500: #F5EE9E;
+  --color-secondary-500: rgb(245, 248, 68);
   --color-secondary-700: #979033;
   --color-white-500: #FDFFFC;
+  --color-white-900: rgb(153, 155, 152);
   --color-green-300:#4CB944;
   --color-green-500:#109648;
   --color-green-700:#14591D;
   --color-orange-100: #FF934F;
   --color-orange-300: #E8871E;
   --color-orange-500: #F06543;
+  --color-violet-blue-500: #7379D0;
   --color-violet-100: #D4AFB9;
   --color-violet-300: #F15BB5;
   --color-violet-500: #E56399;
@@ -254,7 +256,7 @@ header {
   z-index: 10; }
 
 .App-header {
-  background-color: rgba(27, 39, 88, 0.8);
+  background-color: rgba(27, 39, 88, 0.95);
   position: sticky;
   top: 0;
   padding: 0 2%;
@@ -275,9 +277,11 @@ header {
   .App-header .nav__list .nav__link {
     color: var(--color-white-500); }
   .App-header .nav__link-emoji {
-    background-color: transparent !important; }
+    background-color: transparent !important;
+    filter: drop-shadow(none); }
     .App-header .nav__link-emoji:hover, .App-header .nav__link-emoji:active {
       box-shadow: none !important;
+      filter: drop-shadow(0.4em 0.2em 0.1em black);
       transform: scale(1.4); }
   .App-header .nav__link {
     display: flex;
@@ -285,12 +289,15 @@ header {
     padding: 20px;
     color: white;
     text-decoration: none;
-    text-shadow: rgba(99, 61, 61, 0.4) -0.5px 1px;
+    font-weight: 300;
+    letter-spacing: .1em;
     transition: all  150ms ease-in; }
     .App-header .nav__link:hover {
-      background: white;
-      color: #D0CA73;
-      text-shadow: rgba(0, 0, 0, 0.8) -0.2px 0.4px;
+      background: var(--color-secondary-500);
+      color: var(--color-base-500);
+      letter-spacing: .12em;
+      font-weight: 500;
+      text-shadow: rgba(0, 0, 0, 0.4) 0.05em 0.1em 0.2em;
       box-shadow: -0.8em 0.4em 0.25rem 0.09rem rgba(0, 0, 0, 0.6);
       transition: all  300ms ease-out; }
     .App-header .nav__link:active {
@@ -579,6 +586,42 @@ img {
   .feature__secondary--more:active {
     text-shadow: black -2px 4px;
     transition: all 100ms ease-out; }
+
+.Categories {
+  display: flex;
+  padding: 2em 6em; }
+  .Categories .category {
+    color: white;
+    margin: 0 auto;
+    padding: 6em 0;
+    width: 30%;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: .2em;
+    text-shadow: black .2em .4em .1em;
+    transition: all 100ms ease-in-out; }
+    .Categories .category:nth-child(odd) {
+      background: var(--color-violet-blue-500); }
+    .Categories .category:nth-child(even) {
+      background: var(--color-green-500); }
+    .Categories .category:nth-child(3) {
+      background: var(--color-red-500); }
+    .Categories .category:nth-child(4) {
+      background: var(--color-violet-500); }
+    .Categories .category:hover {
+      text-shadow: black .15em .3em .05em;
+      letter-spacing: .3em;
+      font-weight: 500; }
+    .Categories .category:active {
+      text-shadow: black .05em .1em .02em;
+      font-weight: 900;
+      letter-spacing: .4em; }
+  @media only screen and (max-width: 56.26em) {
+    .Categories {
+      padding: 2em 2em;
+      flex-wrap: wrap; }
+      .Categories .category {
+        width: 50%; } }
 
 .App-footer {
   display: flex;

@@ -7,7 +7,7 @@ header {
 }
 
 .App-header {
-  background-color: rgba($color-base-500, 0.8);
+  background-color: rgba($color-base-500, 0.95);
   position: sticky;
   top: 0;
   padding: 0 2%;
@@ -40,8 +40,10 @@ header {
 
   .nav__link-emoji {
     background-color: transparent !important;
+    filter: drop-shadow(none);
     &:hover, &:active {
       box-shadow: none !important;
+      filter: drop-shadow(.4em .2em .1em black);
       transform: scale(1.4);
     }
   }
@@ -52,13 +54,18 @@ header {
       padding: 20px;
       color:white;
       text-decoration: none;
-      text-shadow: rgba(99, 61, 61, 0.4) -.5px 1px;
+      font-weight: 300;
+      letter-spacing: .1em;
+      // text-shadow: rgba(99, 61, 61, 0.4) -.5px 1px;
+      // text-shadow: black .4em .5em .1em;
       transition: all  150ms ease-in;
       
       &:hover {
-        background: white;
-        color: $color-gold;
-        text-shadow: rgba(0, 0, 0, 0.8) -.2px .4px;
+        background: var(--color-secondary-500);
+        color: var(--color-base-500);
+        letter-spacing: .12em;
+        font-weight: 500;
+        text-shadow: rgba(0, 0, 0, 0.4) .05em .1em .2em;
         box-shadow: -.8em .4em .25rem .09rem rgba(0, 0, 0, 0.6);
         transition: all  300ms ease-out;
       }

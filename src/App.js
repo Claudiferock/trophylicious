@@ -3,6 +3,7 @@ import React from 'react';
 import Nav from './components/nav.jsx';
 import Welcome from './components/welcome.jsx';
 import FeatureItems from './components/featureItems/featureItems.jsx';
+import Categories from './components/categories.jsx'
 import Footer from './components/footer.jsx';
 
 import './App.css';
@@ -14,14 +15,7 @@ function App() {
       <div className="App-content">
         <Welcome/>
         <FeatureItems/>
-
-        <div className="Categories" id="categories">
-          <div className="trophies"></div>
-          <div className="medals"></div>
-          <div className="cups"></div>
-          <div className="glass-cristals"></div>
-        </div>
-
+        <Categories/>
       </div>
 
       <Footer/>

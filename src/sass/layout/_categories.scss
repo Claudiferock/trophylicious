@@ -1,4 +1,45 @@
 .Categories {
-//   background: red;
-//   padding: 2em;
+  display: flex;
+  padding: 2em 6em;
+  .category {
+      color: white;
+      margin: 0 auto;
+      padding: 6em 0;
+      width: 30%;
+      text-align: center;
+      font-weight: 300;
+      letter-spacing: .2em;
+      text-shadow: black .2em .4em .1em;
+      &:nth-child(odd) {
+          background: var(--color-violet-blue-500);
+      }
+      &:nth-child(even) {
+          background: var(--color-green-500);
+      }
+      &:nth-child(3) {
+          background: var(--color-red-500);
+      }
+      &:nth-child(4) {
+          background: var(--color-violet-500);
+     }
+     &:hover {
+         text-shadow: black .15em .3em .05em;
+        letter-spacing: .3em;
+        font-weight: 500;
+    }
+    &:active {
+        text-shadow: black .05em .1em .02em;
+        font-weight: 900;
+        letter-spacing: .4em;
+     }
+     transition: all 100ms ease-in-out;
+  }
+
+  @include respond(tab-port) {
+    padding: 2em 2em;
+    flex-wrap: wrap;
+    .category {
+        width: 50%;
+    }
+  }
 }
