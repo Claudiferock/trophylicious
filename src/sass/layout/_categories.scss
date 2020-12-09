@@ -10,6 +10,7 @@
       font-weight: 300;
       letter-spacing: .2em;
       text-shadow: black .2em .4em .1em;
+      border: .2em solid transparent;
       &:nth-child(odd) {
           background: var(--color-violet-blue-500);
       }
@@ -23,12 +24,14 @@
           background: var(--color-violet-500);
      }
      &:hover {
-         text-shadow: black .15em .3em .05em;
+        text-shadow: black .15em .3em .05em;
+        border: .2em solid var(--color-secondary-300);
         letter-spacing: .3em;
         font-weight: 500;
     }
     &:active {
         text-shadow: black .05em .1em .02em;
+        border: .1em solid var(--color-secondary-500);
         font-weight: 900;
         letter-spacing: .4em;
      }

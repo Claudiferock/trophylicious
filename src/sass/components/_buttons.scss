@@ -6,9 +6,12 @@
         background-color: rgba(white, 1);
         color: var(--color-base-500);
         font-size: 1.4rem;
-
+        
         &::after {
             background-color: rgba(white, 0.9);
+        }
+        @include respond(phone-land){
+            margin-top: 3em;
         }
     }
 
@@ -67,7 +70,7 @@
         border-radius: .4em;
         background: var(--color-base-500);
         font-size: 1em;
-        font-weight: 700;
+        font-weight: 300;
         color: white;
         transition: all 150ms ease-in-out;
         &:hover {

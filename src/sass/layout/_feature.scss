@@ -44,18 +44,23 @@
       transition: all 150ms ease-in-out;
       // align-items: center;
       justify-content: center;
+      .svg-heart {
+        fill: red;
+      }
 
       &:hover {
         .svg-heart {
-          opacity: .6;
+          opacity: .7;
         }
         
       }
       
-      &:active {
+      &:active, &:focus {
         .svg-heart{
+          transform: scale(1.4);
           fill: var(--color-red-500);
           opacity: 1;
+          transition: all 250ms ease-in-out;
         }
       }
     }
@@ -68,6 +73,7 @@
 
     .description-text {
       margin: 2em 1em;
+      font-weight: 300;
     }
   
     .feature__main-details {
