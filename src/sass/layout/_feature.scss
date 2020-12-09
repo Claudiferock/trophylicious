@@ -103,6 +103,29 @@
     }
   }
 
+  .feature__secondary-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-white-500);
+    // border: 2px solid red;
+    background: var(--color-base-500);
+    height: 8em;
+    padding: .5em 1em;
+    h3 {
+      letter-spacing: .2em;
+    }
+    p {
+      font-weight: 300;
+    }
+    .priceTag {
+      color: var(--color-green-300);
+    }
+    .strikethrough {
+      color: var(--color-red-300);
+    }
+  }
+
   @include respond(phone-port) {
 
     .feature__main {
@@ -230,7 +253,7 @@ img {
   height: fit-content;
   .priceTag {
     width: 100%;
-    color: $color-blue-one;
+    color: var(--color-green-500);
   }
 }
 
