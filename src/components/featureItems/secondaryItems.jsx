@@ -1,4 +1,5 @@
 import React from 'react';
+import HeartToggler from './heartToggler';
 
 import beerPongAward from '../../assets/img/beer_pong.JPG';
 import tacoAward from '../../assets/img/taco.jpg';
@@ -14,10 +15,13 @@ const SecondaryItems = () => {
     ];
 
     const items = awards.map((item) => 
-        <div className={"feature__secondary__item item" +item.id}> 
+        <div key={item.id} className={"feature__secondary__item item" +item.id}> 
             <img className="feature__secondary-img" src={item.src} alt={item.name} loading="lazy"/>
             <section className="feature__secondary-section">
-                <h3>{item.name} award</h3>
+                <div className="row">
+                    <h3>{item.name} award</h3>
+                    <HeartToggler/>
+                </div>
                 <p>{item.description}</p>          
                 <div className="priceTag">€{item.dicountedPrice.toFixed(2)} <span className="strikethrough"> €{item.price} </span></div>
             </section>

@@ -12,7 +12,7 @@ const HeartToggler = () => {
 
     return (
         <div className="item--favorite btn btn--animated" onClick={toggleisFilled}>
-            <svg className="svg-heart" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24">
+            <svg className="svg-heart" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" viewBox="0 0 24 24">
                 <path d={svgPath}/>
             </svg>
         </div>

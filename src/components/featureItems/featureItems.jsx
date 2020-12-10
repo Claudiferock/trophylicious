@@ -7,7 +7,6 @@ import '../../App.css';
 const FeatureItems = () => (
     <>
         <div className="Feature-items" id="feature-items">
-          
           <FeatureMain/>
           <FeatureSecondary/>
         </div>
