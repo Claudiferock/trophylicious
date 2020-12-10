@@ -1,12 +1,13 @@
 # :trophy: About Trophylicious
 
-This is an imaginary trophy webshop called Trophylicious. The idea originated from an activity while visiting Columbia Road offices with fellow students, where we had to choose an item from the offices and ideate a webshop out of it. The whole thing was fun enough to motivate me to do build a mockup app.
-
-Trophylicious motto is "There's a trophy for anything!", in other words, why not make people feel special and valued (one way or another), including  the lazyest on your team can get a reward for finding the easiest ways of doing something. Even the biggest 4$$ho1e can also be rewarded, since they can push us to be better ourselves regardless origin of such push.
-
-Of course you can also reward people for things that really matter like eating the most tacos or being a beer pong guru or landing a juicy business deal. We all deserve to be valued for our awesomeness and there is indeed a reason to give a trophy for anything.
+Trophylicious is a (mockup) trophy webshop that came up from a contest while visiting Columbia Road with fellow students. The challenge was picking an item from CR's offices and ideate a webshop out of it. The whole thing was fun enough to get me build this mockup app.
 
 <a href="https://raw.githubusercontent.com/Claudiferock/trophylicious/master/src/assets/img/favio.gif"><img src="https://raw.githubusercontent.com/Claudiferock/trophylicious/master/src/assets/img/favio.gif" alt="Gif of fabulous Favio and a trophy" width="512"/></a>
+
+# Technology
+- React
+- Sass
+- Firebase (deployment)
 
 # Setup
 
