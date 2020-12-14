@@ -5,9 +5,9 @@ Trophylicious is a (mockup) trophy webshop that came up from a contest while vis
 <a href="https://raw.githubusercontent.com/Claudiferock/trophylicious/master/src/assets/img/favio.gif"><img src="https://raw.githubusercontent.com/Claudiferock/trophylicious/master/src/assets/img/favio.gif" alt="Gif of fabulous Favio and a trophy" width="512"/></a>
 
 # Technology
-- React
-- Sass
-- Firebase (deployment)
+- [React](https://reactjs.org/)
+- [Sass](https://sass-lang.com/guide)
+- [Firebase](https://firebase.google.com/docs/hosting) (hosting)
 
 # Setup
 
