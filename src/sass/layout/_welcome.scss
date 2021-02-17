@@ -1,16 +1,9 @@
 .Welcome {
   display: flex;
   justify-content: space-around;
-  padding: 5% 1% 10%;
-  //background: $color-blue-one;
-  
-  img {
-    //position: absolute;
-    border: none;
-    z-index: 1;
-    border-radius: 5px;
-
-  }
+  padding: 10% 1% 10%;
+  background: center / cover linear-gradient(rgba(12, 34, 49, 0.25), rgba(244, 161, 93, .25)),
+    center / cover no-repeat url(./assets/img/favio.gif);
   
   .welcome-info{
     display: flex;
@@ -19,11 +12,13 @@
     text-align: center;
     align-items: center;
     border-radius: 5px;
-    background-color: $color-blue-three;
-    padding: 20px;
+    background-color: rgba($color-blue-three, .5);
+    border: 1px solid var(--color-orange-300);
+    padding: 3em;
 
     p {
       padding: 0 2%;
+      margin-bottom: 1em;
       font-size: 3rem;
       font-weight: 100;
       max-width: 40vw;
@@ -40,10 +35,6 @@
   @include respond(phone-land) {
     flex-direction: column;
     padding: 0 0 5%;
-    img {
-      height: 30vh;
-      box-shadow: 0rem 1.2rem .6rem rgba(0, 0, 0, 0.6);
-    }
     
     .welcome-info {
       text-align: justify;
@@ -65,7 +56,7 @@
     padding-bottom: 1%;
     //padding: 5%;
     p {
-      font-size: 1em !important;
+      font-size: 2em !important;
     }
     img {
       border-radius: 0px;
@@ -74,6 +65,7 @@
     
     .welcome-info {
       border-radius: 0px;
+      margin: 2em;
       //box-shadow: 2rem 5rem 6rem rgba(0, 0, 0, 0.6);
       padding: 20px;
 

@@ -9,8 +9,15 @@
     }
   }
 
+  p { line-height: 1.4; }
+
   [class$="-img"] {
     overflow: clip;
+  }
+  
+  .feature__main-img {
+    border: 1px solid var(--color-base-500);
+    border-radius: 3%;
   }
 
   .item--favorite {
@@ -49,24 +56,22 @@
     align-items: center;
     width: 50%;
     height: auto;
-    background: white;
-    border: .4px solid rgba(0, 18, 90, 0.1);
+    background: var(--color-base-500);
     margin-left: 2em;
     padding: 0 3em;
     border-radius: 2%;
-    color: var(--color-base-500);
+    color: var(--color-orange-300);
 
     .description-title {
       text-transform: uppercase;
       font-size: 1.8em;
-      line-height: .8;
       letter-spacing: .09em;
       font-style: italic;
     }
     
     .item--priceTag {
       font-size: .6em;
-      color: var(--color-green-500);
+      color: var(--color-white-700);
       font-weight: 500;
     }
 
@@ -88,21 +93,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: var(--color-white-500);
-    background: var(--color-base-500);
-    height: 8em;
-    padding: .5em 1em;
+    background: transparent;
+    color: var(--color-orange-300);
+    line-height: 1.2;
+    min-height:11em;
+    padding: 2em 1em;
     h3 {
       letter-spacing: .2em;
     }
     p {
+      margin: .5em 0;
       font-weight: 300;
     }
     .priceTag {
-      color: var(--color-green-300);
+      color: var(--color-white-700);
     }
     .strikethrough {
-      color: var(--color-red-300);
+      color: var(--color-red-500);
     }
     .item--favorite {
       margin-left: 0;
@@ -122,6 +129,8 @@
       justify-content: center;
       align-items: center;
       align-content: center;
+      font-size: 1.25em;
+      margin-top: -2.5em;
       
       &-img {
         border: .01em solid rgba(0, 0, 0, 0.35);
@@ -139,34 +148,57 @@
       }
 
       .feature__main--highlight {
-        top: 3vh;
-        margin-top: 0vh;
+        margin-bottom: 20em;
       }
     }
 
-    .feature__secondary-section {
-      justify-content: space-around;
-      height: 6em;
-      padding: .01em .5em;
 
-      h3 {
-        font-size: 1em;
-        font-weight: 500;
-        letter-spacing: .14em;
+    .feature__secondary__item {
+      width: 40vw !important;
+      margin-top: 0;
+      margin-left: -1em;
+      font-size: 1.2em;
+      height: 28vh;
+      border-radius: 5px;
+      border-width: .1em;
+      overflow: scroll;
+      img {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
       }
-      p {
-        visibility: collapse;
+
+      .feature__secondary-section {
+        justify-content: space-between;
+        padding: 1em .5em;
+        height: 5em !important;
+  
+        h3 {
+          font-size: 1em;
+          font-weight: 500;
+          letter-spacing: .14em;
+        }
+        .strikethrough {
+          transform: rotate(.6 turn);
+        }
+        .item--favorite {
+          display: flex;
+          margin-left: 0;
+          padding: 0;
+          border-radius: 0;
+          transform: scale(.6);
+        }
       }
-      .strikethrough {
-        transform: rotate(.6 turn);
-      }
-      .item--favorite {
-        display: flex;
-        margin-left: 0;
-        padding: 0;
-        border-radius: 0;
-        transform: scale(.6);
-      }
+    }
+    
+    .item2 {
+      margin-left: -3.5em;
+    }
+    
+    .feature__secondary--more{
+      align-self: center;
+      margin-left: .75em;
+      height: 20vh;
+      border-radius: 25px;
     }
   }
 
@@ -228,7 +260,7 @@
 img {
     max-width: 100%;
     display: block;
-    border-radius: 3%;
+    border-radius: 25px;
 }
 
 .feature__main {
@@ -260,13 +292,24 @@ img {
   transition: all 200ms ease-in-out;
 }
 
+.feature__secondary--highlight {
+  margin-top: 2em;
+}
+
 [class^="feature__secondary__item"] {
-  border: .4px solid rgba(0, 18, 90, 0.4);
-  border-radius: 5px;
+  border: 1px solid rgba(12, 34, 49, .5);
+  margin-top: 2em;
+  //box-shadow: -.1em .2em .2rem .05rem var(--color-base-500);
+  background: var(--color-base-500);
+  border-radius: 25px;
   height: fit-content;
+  img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   .priceTag {
     width: 100%;
-    color: var(--color-green-500);
+    color: var(--color-white-700);
   }
 }
 
@@ -275,7 +318,7 @@ img {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: $color-blue-one;
+  background: var(--color-base-500);
   color: white;
   font-size: 3rem;
   font-weight: bold;

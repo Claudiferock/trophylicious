@@ -1,10 +1,11 @@
 .App-footer {
   display: flex;
   align-items: center;
+  padding: 2em 0;
   padding-left: 5%;
   background: transparent;
-  height: 10vh;
   color: white;
+  font-size: 2em;
 
   a {
     justify-content: center;
@@ -16,43 +17,38 @@
       fill: var(--color-white-500);
       margin-left: 1em;
       padding-top: .4em;
+      width: 42px;
     }
 
     &:hover, &:active, &:focus {
-      background: white;
-      color: var(--color-base-700);
-      border-radius: 5px;
-      border: .1em solid var(--color-red-500);
-      padding: .8em 1.8em;
-      text-shadow: rgba(black, 0.5) -.8px 1px;
-      outline: 0.14em solid khaki;
-      outline-offset: 1em;
-      -moz-outline-radius: 1.3em;
-      box-shadow: 0 0 0 .18em var(--color-white-500),
-      0 0 0 .55em var(--color-red-500),
-      // -.8em .4em .25rem .09rem rgba(0, 0, 0, 0.6), .8em -.4em .25rem .09rem rgba(0, 0, 0, 0.6)
-      ;
+      color: var(--color-red-500);
+      text-shadow: rgba(black, 0.8) -.8px 1px;
       .octicon {
-        fill: var(--color-base-500);
-        padding: 0;
+        fill: var(--color-red-500);
+        filter: drop-shadow(.1em .1em .05em rgba(black, .8));
+        transition: all 200ms ease-out;
       }
-      transition: all 50ms ease-out;
+      transition: all 200ms ease-out;
     }
-
+    
   }
 
   @include respond(tab-land) {
-    padding: 2em 0 !important;
-    font-size: 1.4em;
+    padding: 2em auto;
+    font-size: 1.3em;
+    font-weight: 500;
 
     a{
       margin-left: 1em;
+      .octicon {
+        margin-left: 0;
+        width: 1.2em;
+      }
       &:hover, &:active, &:focus {
         background: white;
-        padding: .5em 1em;
-        .octicon {
-          margin-left: 0;
-        }
+        text-shadow: rgba(black, 0.6) -.8px 1px;
+        border-radius: .2em;
+        padding: .6em .8em;
       }
     }
 

@@ -15,14 +15,15 @@
 
 /* CONTENT */
 .App-content {
-  grid-area: 1 / 1 / 5 / 6;
+  grid-area: 1 / 1 / 6 / 6;
   margin: 0;
   padding-top: 0px;
   background: $color-grey-light;
 }
-  
+
 .Feature-items {
   display: grid;
+  margin-top: 100vh !important;
   grid: {
     template-columns: .5fr repeat(6, 1fr) .5fr;
     template-rows: repeat(4, 1fr);
@@ -32,22 +33,22 @@
 }
 
 .feature__main {
-		grid-area: 1 / 2 / 3 / 8;
-		margin: 1em 0  0;
+  grid-area: 1 / 2 / 3 / 8;
+  margin: 1em 0  0;
 }
 // .feature__main--img {
-//   grid-area: 1 / 2 / 2 / 5;
-// }
-// .feature__main--details {
-//   grid-area: 1 / 5 / 5 / 9;
-// }
-.feature__main--highlight {
-  grid-area: 1 / 1 / 2 / 3;
-}
-
-.item1 {
-  grid-area: 3 / 2 / 6 / 4;
-}
+  //   grid-area: 1 / 2 / 2 / 5;
+  // }
+  // .feature__main--details {
+    //   grid-area: 1 / 5 / 5 / 9;
+    // }
+    .feature__main--highlight {
+      grid-area: 1 / 1 / 2 / 3;
+    }
+    
+    .item1 {
+      grid-area: 3 / 2 / 6 / 4;
+    }
 .item2 {
   grid-area: 3 / 4 / 6 / 6;
 }
@@ -65,29 +66,42 @@
 }
 
 @include respond(phone-port) {
+
+  //FIX 
+  .App-header {
+    grid-area: 0 / 0 / 0 / 0;
+    height: 0rem !important;
+  }
+
+  .Welcome {
+    grid-area: 1 / 1 / 2 / 6;
+  }
+
   .Feature-items {
+    margin-top: 20vh !important;
     grid: {
       template-rows: repeat(5, 1fr);
     }
   }
-		.feature__main {
-			grid-area: 1 / 1 / 5 / 9;
+	
+  .feature__main {
+    grid-area: 2 / 1 / 4 / 9;
 	}
 
   .item1 {
-    grid-area: 5 / 2 / 6 / 4;
+    grid-area: 4 / 2 / 5 / 5;
   }
   .item2 {
-    grid-area: 5 / 4 / 6 / 6;
+    grid-area: 4 / 6 / 5 / 8;
   }
   .item3 {
-    grid-area: 5 / 6 / 6 / 8;
+    grid-area: 5 / 2 / 6 / 6;
   }
   .feature__secondary--highlight {
-    grid-area: 5 / 1 / 6 / 3;
+    grid-area: 4 / 1 / 6 / 3;
   }
   .feature__secondary--more {
-    grid-area: 5 / 8 / 6 / 9;
+    grid-area: 5 / 5 / 6 / 8;
     background: $color-blue-one;
     color: white;
   }

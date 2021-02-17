@@ -2,20 +2,21 @@
 
 :root {
     --color-base-300: #61A0AF;
-    --color-base-400: rgba(44, 65, 148, 1);
-    --color-base-500: #1B2758;
-    --color-base-600: #1B2951;
-    --color-base-700: #1A2853;
+    --color-base-400: rgb(12, 34, 49);
+    --color-base-500: #0C2231;
+    --color-base-600: #0C2231;
+    --color-base-700: #0C2231;
     --color-secondary-300: rgba(245, 248, 68, .8);
     --color-secondary-500: rgb(245, 248, 68);
     --color-secondary-700: #979033;
     --color-white-500: #fffefc;
+    --color-white-700: #F7F1F8;
     --color-white-900: hsl(40, 50%, 90%);
     --color-green-300:#4CB944;
     --color-green-500:#109648;
-    --color-green-700:#14591D;
+    --color-green-700:#1C422B;
     --color-orange-100: #FF934F;
-    --color-orange-300: #E8871E;
+    --color-orange-300: #F4A15D;
     --color-orange-500: #F06543;
     --color-violet-blue-500: #7379D0;
     --color-violet-100: #D4AFB9;
@@ -28,12 +29,12 @@
 
 // changing from Sass variables to css variables
 $color-base-300: #61A0AF;
-$color-base-500: #1B2758;
-$color-base-600: #1B2951;
-$color-base-700: #1A2853;
-$color-blue-one: #1B2951;
-$color-blue-two: #1A2853;
-$color-blue-three: #1B2758;
+$color-base-500: #0C2231;
+$color-base-600: #0C2231;
+$color-base-700: #0C2231;
+$color-blue-one: #0C2231;
+$color-blue-two: #0C2231;
+$color-blue-three: #0C2231;
 $color-violet: #7379D0;
 $color-lila: #D073A7;
 $color-grey: #818782;
