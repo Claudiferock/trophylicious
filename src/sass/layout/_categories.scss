@@ -2,36 +2,29 @@
   display: flex;
   padding: 2em 6em;
   .category {
+    color: $color-base-500;
+    margin: 0 .5em;
+    padding: 6em 0;
+    width: 30%;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: .2em;
+    text-shadow: rgba(0, 0, 0, 0.75) .1em .2em .1em;
+    border: .25em solid $color-base-500;
+    background: transparent;
+    transition: all 500ms ease-in-out;
+    
+    &:hover {
       color: white;
-      margin: 0 auto;
-      padding: 6em 0;
-      width: 30%;
-      text-align: center;
-      font-weight: 300;
-      letter-spacing: .2em;
-      text-shadow: black .2em .4em .1em;
-      border: .2em solid transparent;
-      &:nth-child(odd) {
-          background: var(--color-violet-blue-500);
-      }
-      &:nth-child(even) {
-          background: var(--color-green-500);
-      }
-      &:nth-child(3) {
-          background: var(--color-red-500);
-      }
-      &:nth-child(4) {
-          background: var(--color-violet-500);
-     }
-     &:hover {
-        text-shadow: black .15em .3em .05em;
-        border: .2em solid var(--color-orange-300);
-        letter-spacing: .3em;
-        font-weight: 500;
+      background: $color-base-500;
+      text-shadow: rgba(0, 0, 0, 0.5) .15em .3em .05em;
+      border: .25em solid var(--color-orange-300);
+      letter-spacing: .3em;
+      font-weight: 500;
     }
     &:active {
-        text-shadow: black .05em .1em .02em;
-        border: .1em solid var(--color-orange-300);
+        text-shadow: rgba(0, 0, 0, 0.25) .05em .1em .02em;
+        border: .25em solid rgba($color-secondary-500, .75);
         font-weight: 700;
         letter-spacing: .4em;
      }

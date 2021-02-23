@@ -28,7 +28,7 @@
     template-columns: .5fr repeat(6, 1fr) .5fr;
     template-rows: repeat(4, 1fr);
     column-gap: 1em;
-    row-gap: 1em;
+    row-gap: 2em;
   }
 }
 
@@ -60,8 +60,11 @@
 }
 .feature__secondary--more {
   grid-area: 3 / 8 / 5 / 9;
-		background: $color-blue-one;
-		margin: 0 0 .5em;
+  height: 10em;
+  padding: .25em;
+  align-self:center;
+	background: $color-blue-one;
+  border-radius: 5px;
   color: white;
 }
 

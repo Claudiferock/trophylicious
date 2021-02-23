@@ -15,17 +15,17 @@ const SecondaryItems = () => {
     ];
 
     const items = awards.map((item) => 
-        <div key={item.id} className={"feature__secondary__item item" +item.id}> 
+        <section key={item.id} className={"feature__secondary__item item" +item.id}> 
             <img className="feature__secondary-img" src={item.src} alt={item.name} loading="lazy"/>
-            <section className="feature__secondary-section">
+            <aside className="feature__secondary-section">
                 <div className="row">
                     <h3>{item.name} award</h3>
                     <HeartToggler/>
                 </div>
                 <p>{item.description}</p>          
                 <div className="priceTag">€{item.dicountedPrice.toFixed(2)} <span className="strikethrough"> €{item.price} </span></div>
-            </section>
-        </div>
+            </aside>
+        </section>
     )
 
     return (

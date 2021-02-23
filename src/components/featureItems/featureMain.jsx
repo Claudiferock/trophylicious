@@ -11,12 +11,12 @@ const FeatureMain = (props) => {
 
   return (
     <>
-          <div className="feature__main">    
-            <div className="feature__main-img">
+          <main className="feature__main">    
+            <section className="feature__main-img">
               <img src={ducksAward} alt="Quack awards" loading="lazy"/>
-            </div>
+            </section>
 
-            <div className="feature__main-info">
+            <aside className="feature__main-info">
               <h2 className="description-title">Quacktastick Award 3-Pack <span className="item--priceTag">(€{((60/100) * (3*12)).toFixed(2)})<span className="strikethrough">€60</span></span></h2>
               <p className="description-text">{descriptionText}</p>
               <div className="feature__main-details">
@@ -25,10 +25,10 @@ const FeatureMain = (props) => {
                 </div>
                 <HeartToggler/>
               </div>
-            </div>
+            </aside>
 
-            <div className="feature__main--highlight" alt="main highlight">60% OFF</div>
-          </div>
+            <section className="feature__main--highlight" alt="main highlight">60% OFF</section>
+          </main>
     </>
   );
 }

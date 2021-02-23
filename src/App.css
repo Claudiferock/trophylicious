@@ -23,7 +23,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   --color-base-600: #0C2231;
   --color-base-700: #0C2231;
   --color-secondary-300: rgba(245, 248, 68, .8);
-  --color-secondary-500: rgb(245, 248, 68);
+  --color-secondary-500: #F4A15D;
   --color-secondary-700: #979033;
   --color-white-500: #fffefc;
   --color-white-700: #F7F1F8;
@@ -109,10 +109,9 @@ img {
   visibility: collapse; }
 
 .strikethrough {
-  font-size: .8em;
   font-weight: 300;
   text-decoration: line-through;
-  color: rgba(255, 0, 0, 0.6); }
+  color: rgba(255, 24, 69, 0.5); }
 
 .btn {
   cursor: pointer;
@@ -208,7 +207,7 @@ img {
   grid-template-columns: 0.5fr repeat(6, 1fr) 0.5fr;
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 1em;
-  grid-row-gap: 1em; }
+  grid-row-gap: 2em; }
 
 .feature__main {
   grid-area: 1 / 2 / 3 / 8;
@@ -231,8 +230,11 @@ img {
 
 .feature__secondary--more {
   grid-area: 3 / 8 / 5 / 9;
+  height: 10em;
+  padding: .25em;
+  align-self: center;
   background: #0C2231;
-  margin: 0 0 .5em;
+  border-radius: 5px;
   color: white; }
 
 @media only screen and (max-width: 30em) {
@@ -448,7 +450,7 @@ header {
   margin: 1em 0;
   position: relative; }
   .Feature-items:hover [class$="--highlight"], .Feature-items:focus [class$="--highlight"], .Feature-items:active [class$="--highlight"] {
-    background: rgba(255, 0, 0, 0.8);
+    background: var(--color-red-500);
     box-shadow: -0.5em 0.25em 0.2rem 0.05rem rgba(0, 0, 0, 0.6);
     transition: all 100ms ease-in-out; }
   .Feature-items p {
@@ -466,7 +468,7 @@ header {
     transition: all 150ms ease-in-out;
     justify-content: center; }
     .Feature-items .item--favorite .svg-heart {
-      fill: red; }
+      fill: var(--color-red-500); }
     .Feature-items .item--favorite:hover .svg-heart {
       opacity: .7; }
     .Feature-items .item--favorite:active .svg-heart, .Feature-items .item--favorite:focus .svg-heart {
@@ -522,7 +524,7 @@ header {
     .Feature-items .feature__secondary-section .priceTag {
       color: var(--color-white-700); }
     .Feature-items .feature__secondary-section .strikethrough {
-      color: var(--color-red-500); }
+      color: rgba(255, 24, 69, 0.75); }
     .Feature-items .feature__secondary-section .item--favorite {
       margin-left: 0;
       padding: .4em;
@@ -688,32 +690,28 @@ img {
   display: flex;
   padding: 2em 6em; }
   .Categories .category {
-    color: white;
-    margin: 0 auto;
+    color: #0C2231;
+    margin: 0 .5em;
     padding: 6em 0;
     width: 30%;
     text-align: center;
     font-weight: 300;
     letter-spacing: .2em;
-    text-shadow: black .2em .4em .1em;
-    border: .2em solid transparent;
+    text-shadow: rgba(0, 0, 0, 0.75) 0.1em 0.2em 0.1em;
+    border: 0.25em solid #0C2231;
+    background: transparent;
+    transition: all 500ms ease-in-out;
     transition: all 100ms ease-in-out; }
-    .Categories .category:nth-child(odd) {
-      background: var(--color-violet-blue-500); }
-    .Categories .category:nth-child(even) {
-      background: var(--color-green-500); }
-    .Categories .category:nth-child(3) {
-      background: var(--color-red-500); }
-    .Categories .category:nth-child(4) {
-      background: var(--color-violet-500); }
     .Categories .category:hover {
-      text-shadow: black .15em .3em .05em;
-      border: 0.2em solid var(--color-orange-300);
+      color: white;
+      background: #0C2231;
+      text-shadow: rgba(0, 0, 0, 0.5) 0.15em 0.3em 0.05em;
+      border: 0.25em solid var(--color-orange-300);
       letter-spacing: .3em;
       font-weight: 500; }
     .Categories .category:active {
-      text-shadow: black .05em .1em .02em;
-      border: 0.1em solid var(--color-orange-300);
+      text-shadow: rgba(0, 0, 0, 0.25) 0.05em 0.1em 0.02em;
+      border: 0.25em solid rgba(244, 161, 93, 0.75);
       font-weight: 700;
       letter-spacing: .4em; }
   @media only screen and (max-width: 56.26em) {

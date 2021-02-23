@@ -6,12 +6,12 @@ const Categories = () => {
 
 
     return (
-        <div className="Categories" id="categories">
-            <div className="category category-trophies">TROPHIES</div>
-            <div className="category category-medals">MEDALS</div>
-            <div className="category category-cups">CUPS</div>
-            <div className="category category-glass-cristals">GLASS/CRISTALS</div>
-      </div>
+        <main className="Categories" id="categories">
+            <section className="category category-trophies">TROPHIES</section>
+            <section className="category category-medals">MEDALS</section>
+            <section className="category category-cups">CUPS</section>
+            <section className="category category-glass-cristals">GLASS/CRISTALS</section>
+      </main>
     )
 };
 
